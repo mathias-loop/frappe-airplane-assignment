@@ -68,6 +68,7 @@
   {
    "fieldname": "departure_date",
    "fieldtype": "Date",
+   "in_standard_filter": 1,
    "label": "Departure Date",
    "reqd": 1
   },
@@ -87,6 +88,7 @@
    "fetch_from": "source_airport.code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Source Airport Code",
    "read_only": 1,
    "reqd": 1
@@ -95,6 +97,7 @@
    "fetch_from": "destination_airport.code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Destination Airport Code",
    "read_only": 1,
    "reqd": 1
@@ -104,7 +107,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-28 07:31:07.767611",
+ "modified": "2026-01-28 08:05:45.344860",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
@@ -129,5 +132,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }
