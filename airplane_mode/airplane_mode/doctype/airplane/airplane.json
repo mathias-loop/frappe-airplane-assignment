@@ -1,41 +1,25 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2026-01-28 01:55:27.151812",
+ "creation": "2026-01-28 02:36:43.461490",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "founding_year",
-  "customer_care_number",
-  "headquaters"
+  "section_break_w4y6"
  ],
  "fields": [
   {
-   "fieldname": "founding_year",
-   "fieldtype": "Int",
-   "label": "Founding Year",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "customer_care_number",
-   "fieldtype": "Data",
-   "label": "Customer Care Number"
-  },
-  {
-   "fieldname": "headquaters",
-   "fieldtype": "Data",
-   "label": "Headquaters"
+   "fieldname": "section_break_w4y6",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 02:37:44.323311",
+ "modified": "2026-01-28 02:36:43.461490",
  "modified_by": "Administrator",
  "module": "airplane_mode",
- "name": "Airline",
- "naming_rule": "Set by user",
+ "name": "Airplane",
  "owner": "Administrator",
  "permissions": [
   {
