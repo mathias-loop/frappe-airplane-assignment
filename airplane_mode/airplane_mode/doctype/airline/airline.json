@@ -31,10 +31,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-28 02:53:12.324009",
+ "modified": "2026-01-28 08:21:13.399044",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airline",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
