@@ -17,7 +17,8 @@
   "duration_of_flight",
   "source_airport_code",
   "destination_airport_code",
-  "status"
+  "status",
+  "add_ons"
  ],
  "fields": [
   {
@@ -110,13 +111,19 @@
    "label": "Status",
    "options": "Booked\nChecked-In\nBoarded",
    "reqd": 1
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "Add-ons",
+   "options": "Airplane Ticket Add-on Item"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-29 01:04:32.141471",
+ "modified": "2026-01-29 06:25:34.014748",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
