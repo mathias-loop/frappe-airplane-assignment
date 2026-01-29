@@ -5,16 +5,15 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "full_name",
   "first_name",
   "last_name",
-  "date_of_birth",
-  "full_name"
+  "date_of_birth"
  ],
  "fields": [
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "First Name",
    "reqd": 1
   },
@@ -31,10 +30,14 @@
    "reqd": 1
   },
   {
+   "depends_on": "App Logo\nDocType\nFlight Passenger\nSearch or type a command (Ctrl + G)\nBegin typing for results.\nNo new notifications\nHelp \n\nA\nFlight Passenger\nNot Saved\nThis site is running in developer mode. Any change made here will be updated in code.\nIf you just want to customize for your site, use Customize Form instead.\nForm\nSettings\nConnections\nModule\nairplane_mode\nBegin typing for results.\nmodule\n\nIs Submittable\nOnce submitted, submittable documents cannot be changed. They can only be Cancelled and Amended.\n\nis_submittable\n\nIs Child Table\nChild Tables are shown as a Grid in other DocTypes\n\nistable\n\nIs Single\nSingle Types have only one record no tables associated. Values are stored in tabSingles\n\nissingle\n\nIs Tree\nTree structures are implemented using Nested Set\n\nis_tree\n\nIs Calendar and Gantt\nEnables Calendar and Gantt views.\n\nis_calendar_and_gantt\n\nQuick Entry\nOpen a dialog with mandatory fields to create a new record quickly\n\nquick_entry\n\nTrack Changes\nIf enabled, changes to the document are tracked and shown in timeline\n\ntrack_changes\n\nTrack Seen\nIf enabled, the document is marked as seen, the first time a user opens it\n\ntrack_seen\n\nTrack Views\nIf enabled, document views are tracked, this can happen multiple times\n\ntrack_views\n\nCustom?\ncustom\n\nBeta\nbeta\n\nIs Virtual\nis_virtual\nNaming\nNaming Rule\n\nExpression\nnaming_rule\nAuto Name\nautoincrement\nFormat: format:EXAMPLE-{MM}morewords{fieldname1}-{fieldname2}-{#####} - Replace all braced words (fieldnames, date words (DD, MM, YY), series) with their value. Outside braces, any characters can be used.\n\nautoname\n\nAllow Rename\nallow_rename\nDescription\ndescription\nDocumentation Link\nURL for documentation or help\n\ndocumentation\nForm Settings \nView Settings \nTitle Field\nfull_name\ntitle_field\n\nShow Title in Link Fields\nshow_title_field_in_link\n\nTranslate Link Fields\ntranslated_doctype\nSearch Fields\nsearch_fields\nDefault Print Format\ndefault_print_format\nDefault Sort Field\nmodified\nsort_field\nDefault Sort Order\n\nDESC\nsort_order\nDefault View\n\ndefault_view\n\nForce Re-route to Default View\nforce_re_route_to_default_view\nShow in Module Section\n\ndocument_type\nIcon\nicon\nColor\ncolor\n\nShow Preview Popup\nshow_preview_popup\n\nMake \"name\" searchable in Global Search\nshow_name_in_global_search\nEmail Settings \nPermission Rules\npermissions\nPermissions\n\nNo.\nRole\nLevel\nSelect\nRead\nWrite\nCreate\nDelete\nSubmit\n\n1\nSystem Manager\n0\n\n\n\n\n\n\nRestrict To Domain\nBegin typing for results.\nrestrict_to_domain\n\nUser Cannot Search\nread_only\n\nUser Cannot Create\nin_create\n\nProtect Attached Files\nUsers are only able to delete attached files if the document is either in draft or if the document is canceled and they are also able to delete the document.\n\nprotect_attached_files\nActions \nLinked Documents \nlinks\nLinks\n\nNo.\nLink DocType\nLink Fieldname\nGroup\n\n1\nAirplane Ticket\npassenger\nDocument States \nWeb View\n\nHas Web View\nhas_web_view\n\nIndex Web Pages for Search\nindex_web_pages_for_search\nRoute\nroute\nFields \nfields\nFields\n\nNo.\nLabel\nType\nName\nMandatory\nOptions\n\n1\nFirst Name\nData\nfirst_name\n\n\n2\nLast Name\nData\nlast_name\n\n\n3\nDate Of Birth\nDate\ndate_of_birth\n\n\n4\nFull Name\nData\nfull_name\n\nComments\nA\ncomment\n\n\nActivity\nYou last edited this \u00b7 5 minutes ago\nYou changed the value of Show Title in Link Fields from 1 to 0 \u00b7 42 minutes ago\nYou changed the value of Show Title in Link Fields from 0 to 1 \u00b7 44 minutes ago\nYou changed the value of Title Field from null to full_name \u00b7 45 minutes ago\nYou added 4 rows to Fields \u00b7 55 minutes ago\nYou removed 4 rows from Fields \u00b7 55 minutes ago\nYou added 4 rows to Fields \u00b7 1 hour ago\nYou removed 3 rows from Fields \u00b7 1 hour ago\nYou added 1 row to Links \u00b7 2 hours ago\nYou changed the value of Auto Name from format:.# to autoincrement, Allow Rename from 1 to 0 \u00b7 22 hours ago\nYou changed the value of Auto Name from .# to format:.# \u00b7 23 hours ago\nYou changed the value of Auto Name from # to .# \u00b7 yesterday\nYou changed the value of Naming Rule from \"\" to Expression, Auto Name from null to # \u00b7 yesterday\nYou added 3 rows to Fields \u00b7 yesterday\nYou removed 1 row from Fields \u00b7 yesterday\nYou created this \u00b7 yesterday",
    "fieldname": "full_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Full Name",
-   "read_only": 1
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
@@ -45,7 +48,7 @@
    "link_fieldname": "passenger"
   }
  ],
- "modified": "2026-01-29 04:13:34.204955",
+ "modified": "2026-01-29 05:13:11.050059",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Flight Passenger",
