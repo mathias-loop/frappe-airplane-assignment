@@ -16,7 +16,8 @@
   "departure_time",
   "duration_of_flight",
   "source_airport_code",
-  "destination_airport_code"
+  "destination_airport_code",
+  "status"
  ],
  "fields": [
   {
@@ -101,13 +102,21 @@
    "label": "Destination Airport Code",
    "read_only": 1,
    "reqd": 1
+  },
+  {
+   "default": "Booked",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Booked\nChecked-In\nBoarded",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-28 08:05:45.344860",
+ "modified": "2026-01-29 01:04:32.141471",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
@@ -132,6 +141,19 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Booked"
+  },
+  {
+   "color": "Purple",
+   "title": "Checked-In"
+  },
+  {
+   "color": "Green",
+   "title": "Boarded"
+  }
+ ],
  "track_changes": 1
 }
