@@ -7,7 +7,8 @@
  "field_order": [
   "first_name",
   "last_name",
-  "date_of_birth"
+  "date_of_birth",
+  "full_name"
  ],
  "fields": [
   {
@@ -28,6 +29,12 @@
    "in_list_view": 1,
    "label": "Date Of Birth ",
    "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -38,7 +45,7 @@
    "link_fieldname": "passenger"
   }
  ],
- "modified": "2026-01-29 02:12:11.971984",
+ "modified": "2026-01-29 04:13:34.204955",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Flight Passenger",
@@ -62,5 +69,6 @@
  "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }
