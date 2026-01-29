@@ -32,8 +32,13 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-01-28 06:40:27.470778",
+ "links": [
+  {
+   "link_doctype": "Airplane Ticket",
+   "link_fieldname": "passenger"
+  }
+ ],
+ "modified": "2026-01-29 02:12:11.971984",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Flight Passenger",
