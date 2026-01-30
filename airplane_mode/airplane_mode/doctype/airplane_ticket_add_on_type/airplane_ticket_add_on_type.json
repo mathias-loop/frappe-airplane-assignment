@@ -1,8 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
- "creation": "2026-01-29 06:35:44.395352",
+ "creation": "2026-01-29 08:48:53.970528",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -18,11 +17,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-29 06:36:39.068723",
+ "modified": "2026-01-30 00:38:32.657168",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket Add-on Type",
- "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
