@@ -3,6 +3,7 @@
 
 # import frappe
 from frappe.model.document import Document
+import frappe
 
 
 class AirplaneTicket(Document):
@@ -32,3 +33,7 @@ class AirplaneTicket(Document):
 				seen_items.add(row.item)
 
 		self.add_ons = unique_rows
+	
+	def before_submit(self): 
+		if self.status != "Boarded": 
+			frappe.throw("You cannot submit this ticket because the status is not 'Boarded'. ")
