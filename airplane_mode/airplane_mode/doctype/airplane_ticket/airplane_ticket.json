@@ -66,7 +66,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Flight",
-   "options": "Airplane",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
@@ -138,7 +138,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-29 07:38:52.001970",
+ "modified": "2026-01-30 01:24:04.296767",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
