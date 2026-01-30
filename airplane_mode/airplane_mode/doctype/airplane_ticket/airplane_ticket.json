@@ -1,22 +1,20 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{flight}-{source_airport_code}-to-{destination_airport_code}-{###}",
+ "autoname": "format:{flight}-{source_airport}-to-{destination_airport}-{###}",
  "creation": "2026-01-28 06:53:41.319034",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_07p9",
   "amended_from",
+  "flight",
+  "passenger",
   "source_airport",
   "destination_airport",
-  "passenger",
-  "flight",
   "departure_date",
   "departure_time",
   "duration_of_flight",
-  "source_airport_code",
-  "destination_airport_code",
   "status",
   "add_ons",
   "flight_price",
@@ -38,19 +36,23 @@
    "search_index": 1
   },
   {
+   "fetch_from": "flight.source_airport",
    "fieldname": "source_airport",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Source Airport",
    "options": "Airport",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "flight.destination_airport",
    "fieldname": "destination_airport",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Destination Airport",
    "options": "Airport",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -70,6 +72,7 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.date_of_departure",
    "fieldname": "departure_date",
    "fieldtype": "Date",
    "in_standard_filter": 1,
@@ -77,33 +80,17 @@
    "reqd": 1
   },
   {
+   "fetch_from": "flight.time_of_departure",
    "fieldname": "departure_time",
    "fieldtype": "Time",
    "label": "Departure Time",
    "reqd": 1
   },
   {
+   "fetch_from": "flight.duration",
    "fieldname": "duration_of_flight",
    "fieldtype": "Duration",
    "label": "Duration of Flight",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "source_airport.code",
-   "fieldname": "source_airport_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Source Airport Code",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
-   "fetch_from": "destination_airport.code",
-   "fieldname": "destination_airport_code",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Destination Airport Code",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -138,7 +125,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-30 01:24:04.296767",
+ "modified": "2026-01-30 03:46:59.112326",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
