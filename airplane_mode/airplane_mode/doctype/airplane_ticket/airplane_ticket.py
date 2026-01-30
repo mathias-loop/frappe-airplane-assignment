@@ -4,6 +4,7 @@
 # import frappe
 from frappe.model.document import Document
 import frappe
+import random
 
 
 class AirplaneTicket(Document):
@@ -37,3 +38,9 @@ class AirplaneTicket(Document):
 	def before_submit(self): 
 		if self.status != "Boarded": 
 			frappe.throw("You cannot submit this ticket because the status is not 'Boarded'. ")
+
+	def before_save(self): 
+		# Creates a random seat placement from rows 1-100 and a random column A-E
+		random_int = random.randint(1, 100)
+		random_letter = random.choice(['A', 'B', 'C', 'D', 'E'])
+		self.seat = f"{random_int}{random_letter}"
