@@ -6,33 +6,22 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_cmjs",
-  "amended_from",
   "airplane",
+  "column_break_liem",
+  "options",
+  "airport_details_section",
   "source_airport",
-  "destination_airport",
   "source_airport_code",
+  "column_break_wtpo",
+  "destination_airport",
   "destination_airport_code",
+  "departure_details_section",
   "date_of_departure",
-  "time_of_departure",
   "duration",
-  "options"
+  "column_break_phby",
+  "time_of_departure"
  ],
  "fields": [
-  {
-   "fieldname": "section_break_cmjs",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Airplane Flight",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
   {
    "fieldname": "airplane",
    "fieldtype": "Link",
@@ -66,7 +55,7 @@
    "default": "Scheduled",
    "fieldname": "options",
    "fieldtype": "Select",
-   "label": "Options",
+   "label": "Status",
    "options": "Scheduled\nCompleted\nCancelled"
   },
   {
@@ -96,13 +85,35 @@
    "fieldtype": "Data",
    "label": "Destination Airport Code ",
    "read_only": 1
+  },
+  {
+   "fieldname": "airport_details_section",
+   "fieldtype": "Section Break",
+   "label": "Airport Details"
+  },
+  {
+   "fieldname": "column_break_wtpo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "departure_details_section",
+   "fieldtype": "Section Break",
+   "label": "Departure Details"
+  },
+  {
+   "fieldname": "column_break_phby",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_liem",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-30 03:33:03.350508",
+ "modified": "2026-01-30 05:59:51.329501",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",

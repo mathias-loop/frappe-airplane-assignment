@@ -7,56 +7,30 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_07p9",
-  "amended_from",
-  "flight",
-  "flight_price",
-  "seat",
   "passenger",
-  "source_airport",
-  "destination_airport",
+  "status",
   "source_airport_code",
+  "airplane",
+  "column_break_cfwr",
+  "flight",
+  "seat",
   "destination_airport_code",
+  "section_break_ywcq",
+  "add_ons",
+  "section_break_hynk",
+  "flight_price",
+  "column_break_suxv",
+  "total_amount",
+  "departure_details_section",
   "departure_date",
   "departure_time",
-  "duration_of_flight",
-  "status",
-  "add_ons",
-  "total_amount"
+  "column_break_rykv",
+  "duration_of_flight"
  ],
  "fields": [
   {
    "fieldname": "section_break_07p9",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Airplane Ticket",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
-   "fetch_from": "flight.source_airport",
-   "fieldname": "source_airport",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Source Airport",
-   "options": "Airport",
-   "read_only": 1,
-   "reqd": 1
-  },
-  {
-   "fetch_from": "flight.destination_airport",
-   "fieldname": "destination_airport",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Destination Airport",
-   "options": "Airport",
-   "read_only": 1,
-   "reqd": 1
   },
   {
    "fieldname": "passenger",
@@ -142,13 +116,45 @@
    "fieldtype": "Data",
    "label": "Seat",
    "read_only": 1
+  },
+  {
+   "fetch_from": "flight.airplane",
+   "fieldname": "airplane",
+   "fieldtype": "Link",
+   "label": "Airplane",
+   "options": "Airplane"
+  },
+  {
+   "fieldname": "column_break_cfwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ywcq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_hynk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_suxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "departure_details_section",
+   "fieldtype": "Section Break",
+   "label": "Departure Details"
+  },
+  {
+   "fieldname": "column_break_rykv",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-30 04:34:50.828939",
+ "modified": "2026-01-30 06:07:25.621073",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",
