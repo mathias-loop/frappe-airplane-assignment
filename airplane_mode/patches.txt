@@ -1,4 +1,4 @@
 [pre_model_sync]
 
 [post_model_sync]
-airplane_mode.patches.populate_full_name
+airplane_mode.patches.populate_seats
