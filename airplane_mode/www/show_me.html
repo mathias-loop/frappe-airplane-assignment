@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Me Colors</title>
+</head>
+<body>
+
+    {% set color = frappe.form_dict.color or "black" %}
+
+    <div style="text-align: center; padding-top: 50px;">
+        <h1>You picked: {{ color }}</h1>
+        
+        <div style="
+            background-color: {{ color }};
+            width: 300px;
+            height: 150px;
+            margin: 0 auto;
+            border: 2px solid #333;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        "></div>
+    </div>
+
+</body>
+</html>

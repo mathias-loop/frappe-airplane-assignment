@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Flights</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1>Available Flights</h1>
+        
+        {% set flights = frappe.get_all("Airplane Flight", 
+            filters={"is_published": 1}, 
+            fields=["name", "route", "airplane", "source_airport_code", "destination_airport_code", "date_of_departure", "time_of_departure", "duration"]
+        ) %}
+
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Airline</th> <th>Route</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for flight in flights %}
+                <tr>
+                    <td>{{ frappe.db.get_value("Airplane", flight.airplane, "airline") }}</td>
+                    
+                    <td>{{ flight.source_airport_code }} ➝ {{ flight.destination_airport_code }}</td>
+                    <td>{{ flight.date_of_departure }}</td>
+                    <td>{{ flight.time_of_departure }}</td>
+                    <td>{{ flight.duration }}</td>
+                    <td>
+                        <a href="/{{ flight.route }}" class="btn btn-primary btn-sm">View Flight</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
