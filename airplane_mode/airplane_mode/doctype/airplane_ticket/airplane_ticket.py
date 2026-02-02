@@ -44,3 +44,22 @@ class AirplaneTicket(Document):
 		random_int = random.randint(1, 100)
 		random_letter = random.choice(['A', 'B', 'C', 'D', 'E'])
 		self.seat = f"{random_int}{random_letter}"
+
+	def validate(self):
+		# Get the connected Airplane Flight
+		flight = frappe.get_doc("Airplane Flight", self.flight)
+		
+		# Get the Airplane linked to that flight to see its capacity
+		airplane = frappe.get_doc("Airplane", flight.airplane)
+		capacity = airplane.capacity
+		
+		# Count how many tickets already exist for this flight
+		existing_tickets = frappe.db.count("Airplane Ticket", 
+			filters={
+				"flight": self.flight
+			}
+		)
+		
+		# Check capacity (Only checks on creation of NEW tickets to avoid blocking edits)
+		if self.is_new() and existing_tickets >= capacity:
+			frappe.throw(f"Cannot book ticket. The flight is full! (Capacity: {capacity})")
