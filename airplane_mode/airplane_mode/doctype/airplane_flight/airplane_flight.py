@@ -14,3 +14,6 @@ class AirplaneFlight(WebsiteGenerator):
 	def on_submit(self): 
 		self.status = "Completed"
 		self.db_set("status", "Completed")
+
+	def get_template(self, context): 
+		return "airplane_mode/airplane_mode/doctype/airplane_flight/templates/airplane_flight.html"
