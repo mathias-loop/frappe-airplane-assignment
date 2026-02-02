@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "autoname": "format:{airplane}-{MM}-{YYYY}-{#####}",
  "creation": "2026-01-30 01:16:52.283608",
@@ -8,7 +9,10 @@
  "field_order": [
   "airplane",
   "column_break_liem",
-  "options",
+  "status",
+  "web_view_settings_section",
+  "is_published",
+  "route",
   "airport_details_section",
   "source_airport",
   "source_airport_code",
@@ -19,7 +23,8 @@
   "date_of_departure",
   "duration",
   "column_break_phby",
-  "time_of_departure"
+  "time_of_departure",
+  "amended_from"
  ],
  "fields": [
   {
@@ -50,13 +55,6 @@
    "in_list_view": 1,
    "label": "Duration",
    "reqd": 1
-  },
-  {
-   "default": "Scheduled",
-   "fieldname": "options",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Scheduled\nCompleted\nCancelled"
   },
   {
    "fieldname": "source_airport",
@@ -107,13 +105,48 @@
   {
    "fieldname": "column_break_liem",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "web_view_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Web View Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published?"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Flight",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCompleted\nCancelled"
   }
  ],
  "grid_page_length": 50,
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2026-01-30 05:59:51.329501",
+ "modified": "2026-02-02 01:01:15.458226",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",
