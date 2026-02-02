@@ -8,7 +8,8 @@
  "field_order": [
   "founding_year",
   "customer_care_number",
-  "headquaters"
+  "headquaters",
+  "website"
  ],
  "fields": [
   {
@@ -26,6 +27,12 @@
    "fieldname": "headquaters",
    "fieldtype": "Data",
    "label": "Headquaters"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website",
+   "options": "URL"
   }
  ],
  "grid_page_length": 50,
@@ -36,7 +43,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2026-01-29 02:02:43.087353",
+ "modified": "2026-02-02 03:28:37.180858",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airline",
