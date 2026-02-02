@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <h5>Date</h5>
-                    <p>{{ doc.date_of_departure }}</p>
+                    <p>{{ frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY") }}</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Time</h5>
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-4">
                     <h5>Duration</h5>
-                    <p>{{ doc.duration }}</p>
+                    <p>{{ frappe.utils.format_duration(doc.duration) }}</p>
                 </div>
             </div>
 
