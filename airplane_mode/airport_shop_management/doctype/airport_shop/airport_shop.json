@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{shop_number}-{shop_name}",
+ "creation": "2026-02-03 06:20:38.853927",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shop_basic_details_section",
+  "shop_name",
+  "airport",
+  "column_break_qwzv",
+  "shop_number",
+  "area",
+  "tenant_and_contract_section",
+  "tenant_name",
+  "status",
+  "rent_amount",
+  "contract_expiry",
+  "column_break_igif",
+  "tenant_email"
+ ],
+ "fields": [
+  {
+   "fieldname": "shop_basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shop Basic Details"
+  },
+  {
+   "fieldname": "shop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "airport",
+   "fieldtype": "Link",
+   "label": "Airport",
+   "options": "Airport"
+  },
+  {
+   "fieldname": "column_break_qwzv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shop_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shop Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "tenant_and_contract_section",
+   "fieldtype": "Section Break",
+   "label": "Tenant and Contract"
+  },
+  {
+   "fieldname": "tenant_name",
+   "fieldtype": "Data",
+   "label": "Tenant Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nOccupied"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "contract_expiry",
+   "fieldtype": "Date",
+   "label": "Contract Expiry"
+  },
+  {
+   "fieldname": "column_break_igif",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tenant_email",
+   "fieldtype": "Data",
+   "label": "Tenant Email"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-03 07:15:03.150368",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Airport Shop",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
