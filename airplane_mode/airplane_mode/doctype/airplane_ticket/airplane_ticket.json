@@ -26,7 +26,9 @@
   "departure_time",
   "column_break_rykv",
   "duration_of_flight",
-  "amended_from"
+  "amended_from",
+  "gate_details",
+  "gate_number"
  ],
  "fields": [
   {
@@ -159,13 +161,25 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "gate_details",
+   "fieldtype": "Section Break",
+   "label": "Gate Details"
+  },
+  {
+   "fetch_from": "flight.gate_number",
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-03 00:57:55.350754",
+ "modified": "2026-02-03 05:39:51.515138",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Ticket",

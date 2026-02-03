@@ -7,39 +7,28 @@
  "engine": "InnoDB",
  "field_order": [
   "full_name",
-  "employee_id",
-  "status"
+  "employee_id"
  ],
  "fields": [
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee ID",
+   "reqd": 1,
+   "unique": 1
+  },
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full Name",
    "reqd": 1
-  },
-  {
-   "fieldname": "employee_id",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Employee ID",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "default": "Inactive",
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Status",
-   "options": "Inactive\nActive",
-   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-03 01:35:09.582386",
+ "modified": "2026-02-03 04:50:30.748276",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Crew Member",

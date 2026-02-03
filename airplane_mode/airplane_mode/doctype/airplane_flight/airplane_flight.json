@@ -10,6 +10,8 @@
   "airplane",
   "column_break_liem",
   "status",
+  "attendees_section",
+  "crew_members",
   "web_view_settings_section",
   "is_published",
   "route",
@@ -24,7 +26,9 @@
   "duration",
   "column_break_phby",
   "time_of_departure",
-  "amended_from"
+  "amended_from",
+  "gate_details_section",
+  "gate_number"
  ],
  "fields": [
   {
@@ -138,6 +142,30 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Scheduled\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "attendees_section",
+   "fieldtype": "Section Break",
+   "label": "Attendees"
+  },
+  {
+   "columns": 3,
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Airplane Flight Crew Member",
+   "print_width": "2",
+   "width": "2"
+  },
+  {
+   "fieldname": "gate_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gate Details"
+  },
+  {
+   "fieldname": "gate_number",
+   "fieldtype": "Data",
+   "label": "Gate Number"
   }
  ],
  "grid_page_length": 50,
@@ -146,7 +174,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-03 00:56:10.222738",
+ "modified": "2026-02-03 05:38:12.798557",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",
