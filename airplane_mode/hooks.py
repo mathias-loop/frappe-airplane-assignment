@@ -247,3 +247,13 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+scheduler_events = {
+    # "daily": [
+    #   "airplane_mode.tasks.daily"
+    # ],
+    "cron": {
+        "0 2 1 * *": [
+            "airplane_mode.tasks.send_rent_reminders"
+        ]
+    },
+}
