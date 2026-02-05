@@ -1,0 +1,23 @@
+<body>
+    <main style="padding: 20px;">
+        <article class="card" style="max-width: 500px; margin: auto;">
+            <header>
+                <h3>{{ doc.shop_name }}</h3>
+            </header>
+            
+            <div class="content">
+                <p><strong>Airport:</strong> {{ doc.airport }}</p>
+                <p><strong>Rent:</strong> {{ doc.rent_amount }}</p>
+                <p><strong>Area:</strong> {{ doc.area }}</p>
+                <p><strong>Status:</strong> {{ doc.status }}</p>
+            </div>
+
+            <footer>
+                <a 
+                    href="/shop-request/new?shop={{ doc.name }}" class="btn btn-primary"> Request Lease
+                </a>
+                <a href="/shops" class="button pseudo">Back to Shops</a>
+            </footer>
+        </article>
+    </main>
+</body>
