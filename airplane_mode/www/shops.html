@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Airport Shops</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <style>
+        body { padding: 20px; }
+        .shop-grid { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="brand">Airport Portal</a>
+    </nav>
+
+    <h1>Available Shops</h1>
+
+    <div class="flex five shop-grid">
+        {% set shops = frappe.get_all("Airport Shop", 
+            filters={"is_published": 1}, 
+            fields=["name", "shop_name", "status", "rent_amount", "route"]) 
+        %}
+
+        {% for shop in shops %}
+        <div>
+            <article class="card">
+                <header>
+                    <h3>{{ shop.shop_name }}</h3>
+                </header>
+                <div class="content">
+                    <p>Rent: <strong>{{ shop.rent_amount }}</strong></p>
+                    <p>Status: {{ shop.status }}</p>
+                </div>
+                <footer>
+                    <a href="/{{ shop.route }}" class="button pseudo">View Details</a>
+                </footer>
+            </article>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
