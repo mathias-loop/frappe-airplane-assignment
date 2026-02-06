@@ -163,6 +163,7 @@
    "label": "Gate Details"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "gate_number",
    "fieldtype": "Data",
    "label": "Gate Number"
@@ -174,7 +175,7 @@
  "is_published_field": "is_published",
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-03 05:38:12.798557",
+ "modified": "2026-02-06 03:38:57.934366",
  "modified_by": "Administrator",
  "module": "airplane_mode",
  "name": "Airplane Flight",

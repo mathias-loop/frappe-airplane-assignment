@@ -3,8 +3,8 @@
 
 # import frappe
 from frappe.website.website_generator import WebsiteGenerator
-
 from frappe.model.document import Document
+import frappe
 
 
 
@@ -17,3 +17,12 @@ class AirplaneFlight(WebsiteGenerator):
 
 	def get_template(self, context): 
 		return "airplane_mode/airplane_mode/doctype/airplane_flight/templates/airplane_flight.html"
+	
+	def before_update_after_submit(self):
+		
+		frappe.db.set_value(
+			"Airplane Ticket",
+			{"flight": self.name},
+			"gate_number",
+			self.gate_number
+		)
